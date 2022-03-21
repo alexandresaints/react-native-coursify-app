@@ -46,7 +46,6 @@ const navigation = useNavigation();
                 />
                 
             </ScrollView>
-            
             </Container>
             )}
             ListFooterComponent={() => <Footer/>}
