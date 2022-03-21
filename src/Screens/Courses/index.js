@@ -3,7 +3,7 @@ import React, {useState, useEffect } from "react";
 import {StyleSheet, Text, ScrollView} from "react-native";
 import { useWindowDimensions } from 'react-native';
 import RenderHtml from 'react-native-render-html';
-import { Container } from "./style";
+import { Container, CategoriesText } from "./style";
 
 
 export default function Courses(props){
@@ -30,7 +30,7 @@ const source = {
     return(
     <ScrollView key={id} style={{backgroundColor: '#FFF'}}>
         <Container>
-               <Text>{title}</Text>
+               <CategoriesText>{title}</CategoriesText>
                <RenderHtml
                 contentWidth={width}
                 source={source}

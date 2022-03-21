@@ -38,7 +38,7 @@ const navigation = useNavigation();
                     category_name: item.name
                     })}}
                     >
-                        <Text>VER MAIS</Text>
+                        <Text>VER MAIS ➤</Text>
                     </TouchableOpacity>
                 </CategoriesContainer>
             <ScrollView horizontal={true} pagingEnabled={false}>
