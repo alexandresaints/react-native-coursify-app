@@ -2,7 +2,6 @@ import api from "../../Services/api";
 import React, {useState, useEffect } from "react";
 import {
 View,
-StyleSheet,
 FlatList,
 ScrollView,
 SafeAreaView

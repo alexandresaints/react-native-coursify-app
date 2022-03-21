@@ -3,6 +3,7 @@ import { theme } from "../Utils/theme";
 
 export const Container = styled.View`
     width: 100%;
+    height: 100%;
     padding: 20px;
     background-color: ${theme.colors.green80};
     flex: 1;

@@ -12,7 +12,7 @@ export default function Footer(){
             <FooterText>
                 O Coursify.me é uma plataforma de ensino à distância,
                 onde qualquer pessoa ou empresa pode construir seu
-                EAD e vender cursos pela internet
+                EAD e vender cursos pela internet.
             </FooterText>
             <Button
             onPress={() => Linking.openURL(coursifyURL, '_blank')}

@@ -4,6 +4,7 @@ import {StyleSheet, Text, ScrollView} from "react-native";
 import { useWindowDimensions } from 'react-native';
 import RenderHtml from 'react-native-render-html';
 import { Container, CategoriesText } from "./style";
+import Footer from "../../Components/Footer";
 
 
 export default function Courses(props){
@@ -36,80 +37,7 @@ const source = {
                 source={source}
                />
         </Container>
+        <Footer/>
     </ScrollView>
     )
 }
-
-const styles = StyleSheet.create({
-
-    container: {
-        margin: 20,
-        backgroundColor: '#FFF'
-    },
-    mainContainer: {
-        flexDirection: 'row'
-    },
-
-    bookFont: {
-        color: '#000',
-        fontWeight: 'bold',
-        maxWidth: 180,
-        fontSize: 18
-    },
-    bookAuthorFont: {
-        color: '#303030',
-        fontSize: 14,
-        maxWidth: 120,
-    },
-    aboutBook: {
-        color: '#000',
-        fontWeight: 'bold',
-        maxWidth: 200,
-        fontSize: 18,
-        marginTop: 20
-    },
-    descriptionBook: {
-        color: '#303030',
-        fontSize: 14,
-        maxWidth: 500,
-        color: '#000',
-        marginTop: 10
-    },
-    headerTopic: {
-        color: '#000',
-        fontWeight: 'bold',
-        fontSize: 20
-
-    },
-
-    bookImage: {
-        width: 180,
-        height: 270,
-        marginRight: 10,
-        borderRadius: 5
-    },
-
-    bookContainer: {
-        flexDirection: 'row',
-    },
-
-    readNowContainer: {
-        justifyContent: 'center',
-        alignItems: 'center',
-        marginTop: 220
-    },
-    readNowText: {
-        color: '#FFF',
-        fontWeight: 'bold',
-        fontSize: 13
-    },
-
-    readNow: {
-        width: '100%',
-        padding: 10,
-        backgroundColor: '#FFA500',
-        justifyContent: 'center',
-        alignItems: 'center'
-    }
-
-})

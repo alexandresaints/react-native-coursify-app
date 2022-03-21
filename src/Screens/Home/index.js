@@ -8,14 +8,13 @@ import Footer from "../../Components/Footer";
 
 export default function Home(){
 
-const [dataBooks, setDataBooks] = useState([])
+const [dataCategories, setDataCategories] = useState([])
 const navigation = useNavigation(); 
 
     useEffect(() => {
         api.get(`categories/`)
                 .then(response => {
-                    setDataBooks(response.data)
-                    console.log(dataBooks)
+                    setDataCategories(response.data)
                 }).catch(error => {
                     console.log(error)
                 })
@@ -23,9 +22,9 @@ const navigation = useNavigation();
     
     return(
     <SafeAreaView style={{backgroundColor: '#FFF'}}>
-            {dataBooks.lenght < 1 ? null :
-            <FlatList
-            data={dataBooks}
+            {dataCategories.lenght < 1 ? null :
+            <FlatList 
+            data={dataCategories}
             keyExtractor={(item) => {return item.id}}
             renderItem={({item}) => (
             <Container>
@@ -45,11 +44,14 @@ const navigation = useNavigation();
                 <Posts
                 categoryId={item.id}
                 />
+                
             </ScrollView>
+            
             </Container>
             )}
-            ListFooterComponent={<Footer/>}
+            ListFooterComponent={() => <Footer/>}
             />
+            
         }
     </SafeAreaView>
     )
